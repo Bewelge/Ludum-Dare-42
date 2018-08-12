@@ -571,9 +571,9 @@ function drawFallingsSats() {
 		let p = fallingSats[key];
 		
 		let siz = Math.min((p.dis-earthHeight)/atmHeight2,1);
-		ctx.fillStyle="rgba(255,"+(Math.random()*255)+",0,"+(0+Math.random()*0.8)+")";
+		ctx.fillStyle="rgba("+255+","+(Math.random()*255)+",0,"+(0.3+Math.random()*0.7)+")";
 		ctx.beginPath();
-		ctx.arc(p.x,p.y,siz * (1+Math.random()*satW),0,Math.PI*2,0);
+		ctx.ellipse(p.x,p.y,siz * (1+Math.random()*satW),siz * (1+Math.random()*satW),Math.random()*Math.PI*2,0,Math.PI*2,0);
 		ctx.fill();
 		ctx.closePath(); 
 		
@@ -585,9 +585,9 @@ function drawFallingsSats() {
 		ctx.drawImage(images["sat.png"],0-siz*satW/2,0-siz*satH/2,siz*satW,siz*satH)
 		ctx.restore();
 
-
+		ctx.fillStyle="rgba("+255+","+(Math.random()*255)+",0,"+(0.3+Math.random()*0.7)+")";
 		ctx.beginPath();
-		ctx.arc(p.x,p.y,siz*(1+Math.random()*4),0,Math.PI*2,0);
+		ctx.ellipse(p.x,p.y,siz * (1+Math.random()*satW),siz * (1+Math.random()*satW),Math.random()*Math.PI*2,0,Math.PI*2,0);
 		ctx.fill();
 		ctx.closePath(); 
 
