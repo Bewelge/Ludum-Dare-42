@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head >
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LDJam #42 - by Bewelge</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="interface.css">
+
+</head>
+<body onload="start()">
+	<div id='mainMenu'>
+		<canvas id='menuCanvas'></canvas>
+		<div id="Title"></div>
+		<div id='menuButs'>
+			<div id='Play' onclick="startGame()" class='menuBut'>Start Game</div>
+			<div id='Play' onclick="startMuted()" class='menuBut'>Start (Muted)</div>
+			<div id='opInstructions' onclick="openInstructions()" class='menuBut'>Instructions</div>
+		</div>
+
+
+		<div id="footer">By <a href='github.com/bewelge'>Bewelge</a></div>
+	</div>
+	<div id='instructions'> In this game, You have to try and launch Satellites into Space! </br></br> Choose the right settings to find a stable orbit and avoid them crashing into each other!
+
+	</br></br></br></br>
+	<b>The Settings:</b>
+	</br>
+	<b>General</b>
+	</br></br>
+	- "Launch Frequency":
+	</br> How quickly the next Rocket will launch (Higher Values -> Quicker Spawn).
+</br></br>
+
+	- "Update Delay":
+	</br> Update Interval in Miliseconds (Lower Values -> Quicker Game).
+</br></br>
+	- "Update Delay":
+	</br> Update Interval in Miliseconds (Lower Values -> Quicker Game).
+</br></br>
+</br>
+	<b>Rocket</b>
+</br>
+	</br>
+	- "Tilt":
+	</br> The amount the Rocket will turn sideways during the specific stage.
+	</br></br>
+	- "Force":
+	</br> The amount of powerthe specific stage of the rocket will use (Higher values reduce Fuel quicker!).
+	</br></br>
+	- "Fuel":
+	</br> How much fuel to pack onto the Rocket stage. Less fuel means that part of the rocket becomes lighter. When fuel goes empty, the stage will be dropped.
+</br>
+</br></br>
+	<b>Satellites</b>
+</br>
+	</br>
+	- "Thrust Interval":
+	</br> The amount of ticks between thrusts (Lower Values -> Quicker Intervals)
+	</br></br>
+	- "Thrust Duration":
+	</br> The amount of ticks that thrust is used every interval.
+	</br></br>
+	- "Thrust Force":
+	</br> The amount of force that will be used when thrust is used each tick.
+
+
+	<div class="menuBut" onclick='closeInstructions()'>Close</div>
+	</div>
+	<div id='footerInstr'> -- Press M to mute -- Press Space to pause Launches -- Press I for Instructions</div>
+	<div id='contentDivs'></div>
+	<div id='zoomIn' onclick="zoomIn()" class='zoom'>+</div>
+	<div id='zoomOut'onclick="zoomOut()" class='zoom'>-</div>
+	<script type="text/javascript" src="lib/jquery-3.3.1.js"></script>
+	
+	
+	
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/domUtil.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/render.js"></script>
+
+	
+</body>
+</html>
