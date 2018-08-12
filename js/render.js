@@ -12,6 +12,8 @@ function drawOnce() {
 	fctx.rect(0,0,width*0.05,height);
 	fctx.fill();
 	fctx.closePath();
+
+	drawAtmosphere()
 };
 function draw() {
 	ctx.clearRect(0,0,width,height)
@@ -27,7 +29,7 @@ function draw() {
 	ctx.translate(width/2,height/2);
 	ctx.scale(zoom,zoom);
 	ctx.translate(-cameraX,-cameraY)
-	drawAtmosphere()
+	
 	drawFallingsSats();
 	drawRocketParts0();
 	drawRocketParts1();
@@ -103,23 +105,32 @@ function drawRocketParts1() {
 
 
 function drawAtmosphere() {
-	ctx.fillStyle="rgba(255,255,255,0.1)";
-	ctx.beginPath();
-	ctx.arc(width/2,height/2,atmHeight2,0,Math.PI*2,0);
-	ctx.fill();
-	ctx.closePath()
+	let rgr =bctx.createRadialGradient(width/2,height/2,0,width/2,height/2,atmHeight2)
+	rgr.addColorStop(0,"rgba(255,255,255,0");
+	rgr.addColorStop(1,"rgba(255,255,255,0.1");
+	let rgr2 =bctx.createRadialGradient(width/2,height/2,0,width/2,height/2,atmHeight1)
+	rgr2.addColorStop(0,"rgba(255,255,255,0");
+	rgr2.addColorStop(1,"rgba(255,255,255,0.1");
+	let rgr3 =bctx.createRadialGradient(width/2,height/2,0,width/2,height/2,atmHeight0)
+	rgr3.addColorStop(0,"rgba(255,255,255,0");
+	rgr3.addColorStop(1,"rgba(255,255,255,0.1");
+	bctx.fillStyle=rgr;//"rgba(255,255,255,0.1)";
+	bctx.beginPath();
+	bctx.arc(width/2,height/2,atmHeight2,0,Math.PI*2,0);
+	bctx.fill();
+	bctx.closePath()
 
-	ctx.fillStyle="rgba(255,255,255,0.1)";
-	ctx.beginPath();
-	ctx.arc(width/2,height/2,atmHeight1,0,Math.PI*2,0);
-	ctx.fill();
-	ctx.closePath()
+	bctx.fillStyle=rgr2//"rgba(255,255,255,0.1)";
+	bctx.beginPath();
+	bctx.arc(width/2,height/2,atmHeight1,0,Math.PI*2,0);
+	bctx.fill();
+	bctx.closePath()
 
-	ctx.fillStyle="rgba(255,255,255,0.1)";
-	ctx.beginPath();
-	ctx.arc(width/2,height/2,atmHeight0,0,Math.PI*2,0);
-	ctx.fill();
-	ctx.closePath()
+	bctx.fillStyle=rgr3//"rgba(255,255,255,0.1)";
+	bctx.beginPath();
+	bctx.arc(width/2,height/2,atmHeight0,0,Math.PI*2,0);
+	bctx.fill();
+	bctx.closePath()
 }
 var introTicker=0;
 var introTexts=[];
