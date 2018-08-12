@@ -485,7 +485,7 @@ function moveLaunchingSats() {
 			
 			} else {
 				if (s.open==0) {
-					s.open=11;
+					s.open=8;
 				}
 			}
 			

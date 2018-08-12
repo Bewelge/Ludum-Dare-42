@@ -402,7 +402,7 @@ function drawLaunchingSat(x,y,ang,countdown) {
 			
 		} else {
 			
-			let img = images["rocketFold"+(12-s.open-1)+".png"]
+			let img = images["rocketFold"+(9-s.open-1)+".png"]
 			ctx.drawImage(img,-siz*img.width/4,-siz*satH/2,siz*img.width/2,siz*satH)
 		}
 		//ctx.fillRect(0-15,0-5,30,10);
@@ -485,7 +485,7 @@ function drawLaunchingSats() {
 			
 		} else {
 			
-			let img = images["rocketFold"+(12-s.open-1)+".png"]
+			let img = images["rocketFold"+(9-s.open-1)+".png"]
 			ctx.drawImage(img,-siz*img.width/4,-siz*satH/2,siz*img.width/2,siz*satH)
 		}
 		//ctx.fillRect(0-15,0-5,30,10);
