@@ -678,8 +678,10 @@ function handleMouseDown(e) {
 
 var pauseSpawn=false;
 function handleKeydown(ev) {
+
 	console.log(ev.code)
 	if (ev.code=="Space") {
+		ev.preventDefault()
 		if (pauseSpawn) {
 			pauseSpawn = false;
 		} else {
