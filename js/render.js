@@ -621,7 +621,7 @@ function drawRotationGains() {
 		} else {
 			r[1]--;
 			ctx.strokeStyle="rgba(255,255,255,"+(r[4]/100)+")";
-			ctx.lineWidth = 25 * (1 - r[4]/100);
+			ctx.lineWidth = 10 * (1 - r[4]/100);
 			ctx.beginPath();
 			ctx.arc(width/2,height/2,r[2],0,Math.PI*2,0);
 			ctx.stroke();

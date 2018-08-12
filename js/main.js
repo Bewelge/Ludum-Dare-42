@@ -199,14 +199,14 @@ function start() {
 	contentContainer.appendChild(topDiv)
 
 	let middleDiv = createContentDiv("Rocket Middle","rocketPart1.png","Weight <span id='weight1'>"+(weight1+fuel1)+"</span>t")
-	middleDiv.appendChild(createSlider("tilt1", 0, 0.5, 0.01, 0.04, "Tilt", "tilt1").div);
-	middleDiv.appendChild(createSlider("force1", 0.1, 15, 0.1, 2, "Force", "force1").div);
+	middleDiv.appendChild(createSlider("tilt1", 0, 0.5, 0.01, 0.4, "Tilt", "tilt1").div);
+	middleDiv.appendChild(createSlider("force1", 0.1, 15, 0.1, 2.5, "Force", "force1").div);
 	middleDiv.appendChild(createSlider("fuel1", 0, 100, 1, 100, "Fuel (%)", "fuel1",updateWeights).div);
 	contentContainer.appendChild(middleDiv)
 
 	let baseDiv = createContentDiv("Rocket Base","rocketPart0.png","Weight <span id='weight0'>"+(weight0+fuel0)+"</span>t")
-	baseDiv.appendChild(createSlider("tilt0", 0, 0.5, 0.01, 0.02, "Tilt", "tilt0").div);
-	baseDiv.appendChild(createSlider("force0", 0.1, 15, 0.1, 2.5, "Force", "force0").div);
+	baseDiv.appendChild(createSlider("tilt0", 0, 0.5, 0.01, 0.2, "Tilt", "tilt0").div);
+	baseDiv.appendChild(createSlider("force0", 0.1, 15, 0.1, 5, "Force", "force0").div);
 	baseDiv.appendChild(createSlider("fuel0", 0, 100, 1, 100, "Fuel (%)", "fuel0",updateWeights).div);
 	contentContainer.appendChild(baseDiv)
 	
@@ -214,7 +214,7 @@ function start() {
 	let satDiv = createContentDiv("Satellite","sat.png")
 	satDiv.appendChild(createSlider("thrustInterval", 0, 1000, 1, 75, "Thrust Interval", "thrustInterval").div);
 	satDiv.appendChild(createSlider("thrustDuration", 0, 1000, 1, 25, "Thrust Duration", "thrustDuration").div);
-	satDiv.appendChild(createSlider("thrustForce", 0, 1, 0.01, 0.13, "Thrust Force", "thrustForce").div);
+	satDiv.appendChild(createSlider("thrustForce", 0, 1, 0.01, 0.2, "Thrust Force", "thrustForce").div);
 	contentContainer.appendChild(satDiv)
 
 	
